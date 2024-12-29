@@ -23,7 +23,7 @@ A modern implementation of the classic Tic Tac Toe game with added features and 
 
 bash
 Copy code
-git clone https://github.com/your-username/tic-tac-toe.git
+git clone https://github.com/KirillSmirnov1988/tic-tac-toe.git
 
 2. Navigate to the project folder:
 
