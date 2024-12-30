@@ -63,6 +63,7 @@ function handleCellClick(event) {
   // Prevent further clicks on the same cell
   cell.removeEventListener("click", handleCellClick);
   cell.classList.add(currentPlayer);
+  cell.classList.remove("active-cell");
 
   // Check if the current player has won
   if (checkIfCurrentPlayerWon(currentPlayer)) {
@@ -120,7 +121,7 @@ function winnerAction(winner, byProfit) {
   if (byProfit) {
     STATUS_HEADER.textContent = `PLAYER "${winner}" WINS BY FORFEIT!`;
   } else {
-    STATUS_HEADER.textContent = `PLYAER "${winner}" WON!!!`;
+    STATUS_HEADER.textContent = `PLAYER "${winner}" WON!!!`;
   }
 
   // Increment the winner's score
@@ -158,7 +159,10 @@ function displayStartNewGame() {
   FINAL_BLOCK.appendChild(h2);
 
   // Disable clicks on all cells
-  CELLS.forEach((cell) => cell.removeEventListener("click", handleCellClick));
+  CELLS.forEach((cell) => {
+    cell.removeEventListener("click", handleCellClick);
+    cell.classList.remove("active-cell");
+  });
 }
 
 // Resets the game for a new round
@@ -178,6 +182,7 @@ function startNewGame() {
   // Reset the board and re-enable cell clicks
   CELLS.forEach((cell) => {
     cell.classList.remove(PLAYER_X, PLAYER_O, "winner-cell");
+    cell.classList.add("active-cell");
     const img = cell.querySelector("img");
     if (img) {
       img.remove();

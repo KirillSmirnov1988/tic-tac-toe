@@ -60,11 +60,14 @@ h1:hover, h2:hover {
     border-radius: 5px;
     font-size: 2.5rem;
     color: #000;
-    cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
 }
 
-.cell:hover {
+.active-cell {
+    cursor: pointer;
+}
+
+.active-cell:hover {
     background: #eee;
     transform: scale(1.05);
 }
@@ -131,6 +134,7 @@ h1:hover, h2:hover {
 }
 
 #new-game {
+    cursor: pointer; 
     animation: zoomEffect 0.5s infinite alternate;
 }
   
