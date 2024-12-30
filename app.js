@@ -151,6 +151,7 @@ function drawAction() {
 // Displays the "START NEW GAME" button
 function displayStartNewGame() {
   const h2 = document.createElement("h2");
+  h2.id = "new-game";
   h2.addEventListener("click", startNewGame);
   h2.textContent = `START NEW GAME`;
 
