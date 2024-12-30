@@ -120,7 +120,7 @@ function winnerAction(winner, byProfit) {
   if (byProfit) {
     STATUS_HEADER.textContent = `PLAYER "${winner}" WINS BY FORFEIT!`;
   } else {
-    STATUS_HEADER.textContent = `PLYAER "${winner}" WON!!!`;
+    STATUS_HEADER.textContent = `PLAYER "${winner}" WON!!!`;
   }
 
   // Increment the winner's score
