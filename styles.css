@@ -131,6 +131,7 @@ h1:hover, h2:hover {
 }
 
 #new-game {
+    cursor: pointer; 
     animation: zoomEffect 0.5s infinite alternate;
 }
   
